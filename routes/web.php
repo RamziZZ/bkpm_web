@@ -1,5 +1,7 @@
+
 <?php
 
+use App\Http\Controllers\BookController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -72,19 +74,20 @@ Route::middleware(['first', 'second'])->group(function () {
     });
 });
 
-Route::namespace('Admin')->group(function() {});
+Route::
+        namespace('Admin')->group(function () { });
 
 /**
  * @link https://laravel.com/docs/11.x/routing#route-group-subdomain-routing dokumentasi terkait subdomain routing
  */
-Route::domain('{acount}.myapp.com')->group(function() {
+Route::domain('{acount}.myapp.com')->group(function () {
     Route::get('users/{id}', fn($account, $id) => '');
 });
 
 /**
  * @link https://laravel.com/docs/11.x/routing#route-group-prefixes dokumentasi terkait Route menggunakan prefix
  */
-Route::prefix('manager')->group(function() {
+Route::prefix('manager')->group(function () {
     Route::get('users/{id}', fn($account, $id) => '')->name('users');
 });
 
@@ -93,3 +96,21 @@ Route::prefix('manager')->group(function() {
  */
 
 // ------------------------------------------------------------
+
+/**
+ * Mulai Acara 5
+ */
+
+/**
+ * Metode resource akan menciptakan beberapa route untuk menangani berbagai tindakan terhadapt resource dalam hal ini book.
+ * Jalankan perintah php artisan route:list untuk melihat hasilnya.
+ * @link https://laravel.com/docs/11.x/controllers#actions-handled-by-resource-controllers
+ */
+
+Route::resource('book', BookController::class);
+
+/**
+ * Selesai Acara 5
+ */
+
+// ----------------------------------------------------------
