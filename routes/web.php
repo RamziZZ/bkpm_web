@@ -1,4 +1,3 @@
-
 <?php
 
 use App\Http\Controllers\BookController;
@@ -114,4 +113,3 @@ Route::resource('book', BookController::class);
  */
 
 // ----------------------------------------------------------
-
