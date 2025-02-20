@@ -113,3 +113,9 @@ Route::resource('book', BookController::class);
  */
 
 // ----------------------------------------------------------
+
+/**
+ * Mulai Acara 6
+ */
+
+Route::get('beranda', [BookController::class, 'index']);

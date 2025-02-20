@@ -14,7 +14,12 @@ class BookController extends Controller
      */
     public function index()
     {
-        return 'Metode ini digunakan untuk mengambil semua data';
+        // return 'Metode ini digunakan untuk mengambil semua data'; dikomentar terlebih dahulu(bagian acara 5)
+
+        // bagian acara 6
+        $name = "Ilman Nafian";
+        $pelajaran = ['Algoritma', 'Basis Data', 'Kalkulus', 'WKPL'];
+        return view('book', compact('name', 'pelajaran'));
     }
 
     /**
