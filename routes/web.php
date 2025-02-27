@@ -4,7 +4,7 @@ use App\Http\Controllers\BookController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('layout');
+    return view('layout ');
 });
 
 /**
@@ -119,3 +119,7 @@ Route::resource('book', BookController::class);
  */
 
 Route::get('beranda', [BookController::class, 'index']);
+
+Route::get('user', 'ManagementUserController@index');
+
+Route::resource('user', 'ManagementUserController');
