@@ -26,8 +26,9 @@ Route::get('/', function () {
 Route::get("/home", [HomeController::class, 'index'])->name('home');
 
 // Route untuk backend dashboard dan produk
-Route::resource('dashboard', DashboardController::class);
-Route::resource('product', ProductController::class);
+
+//Route::resource('dashboard', DashboardController::class);
+//Route::resource('product', ProductController::class);
 
 // Middleware auth untuk halaman profile admin
 Route::get('/admin/profile', function () {
