@@ -7,7 +7,7 @@ App\Http\Controllers\Controller;
 
 class HomeController extends Controller
 {
-    public function inde()
+    public function index()
     {
         return view('frontend.home');
     }

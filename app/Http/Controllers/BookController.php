@@ -17,7 +17,7 @@ class BookController extends Controller
         // return 'Metode ini digunakan untuk mengambil semua data'; dikomentar terlebih dahulu(bagian acara 5)
 
         // bagian acara 6
-        $name = "Ilman Nafian";
+        $name = "Ramzi Farhan";
         $pelajaran = ['Algoritma', 'Basis Data', 'Kalkulus', 'WKPL'];
         return view('book', compact('name', 'pelajaran'));
     }

@@ -7,7 +7,12 @@ use Illuminate\Http\Request;
 class ManagementUserController extends Controller{
 
     public function index() {
-        return "Halo inin adalah method index, dalam controller ManagementUser.";
+        //return "Halo inin adalah method index, dalam controller ManagementUser.";
+        $nama = "Ramzi Farhan Pratama";
+
+        $Pelajaran =["Algoritma & Pemrograman","Kalkulus","Pemrograman web"];
+
+        return view('home', compact('nama','Pelajaran'));
     }
     
     public function create() {
