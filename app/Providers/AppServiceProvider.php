@@ -1,19 +1,24 @@
 <?php
+
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
-use App\Http\Middleware\TerminableMiddleware;
 
 class AppServiceProvider extends ServiceProvider
 {
-    public function register()
+    /**
+     * Register any application services.
+     */
+    public function register(): void
     {
-        // Mendaftarkan TerminableMiddleware di dalam container
-        $this->app->singleton(TerminableMiddleware::class);
+        //
     }
 
-    public function boot()
+    /**
+     * Bootstrap any application services.
+     */
+    public function boot(): void
     {
-        // Mendaftarkan middleware jika perlu
+        //
     }
 }
